@@ -1,6 +1,5 @@
 <?php
 $pageCss = ['auth.css'];
-$pageJs  = ['auth.js'];
 require __DIR__ . '/layout/header.php';
 ?>
 

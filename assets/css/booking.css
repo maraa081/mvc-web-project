@@ -1,0 +1,100 @@
+/* ================= PAGE BOOKING ================= */
+.booking-page {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* ❌ body / nav / footer SUPPRIMÉS */
+/* On ne touche PAS au layout global */
+
+/* ================= CONTAINER ================= */
+.booking-page .reservation-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ================= STEPS ================= */
+.booking-page .steps-indicator {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.booking-page .step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.booking-page .step.active .step-circle {
+    background: #28a745;
+    color: #fff;
+}
+
+/* ================= SLIDER ================= */
+.booking-page .slider-wrapper {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.booking-page .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.booking-page .slide {
+    min-width: 100%;
+    padding: 50px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.4s ease;
+}
+
+.booking-page .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ================= BUTTONS ================= */
+.booking-page .btn-next,
+.booking-page .btn-confirm {
+    background: #28a745;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.booking-page .btn-back-slide {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    border: 2px solid #ddd;
+}
+
+/* ================= MODAL ================= */
+.booking-page .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-page .modal.show {
+    display: flex;
+}

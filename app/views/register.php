@@ -1,6 +1,5 @@
 <?php
 $pageCss = ['auth.css'];
-$pageJs  = ['auth.js'];
 require __DIR__ . '/layout/header.php';
 ?>
 
@@ -10,19 +9,13 @@ require __DIR__ . '/layout/header.php';
         <div class="auth-box">
             <div class="auth-header">
                 <h1>Inscription</h1>
-                <p>Créez votre compte pour commencer</p>
+                <p>Créez votre compte en quelques secondes</p>
             </div>
 
             <form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Prénom</label>
-                        <input type="text" placeholder="Prénom" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Nom</label>
-                        <input type="text" placeholder="Nom" required>
-                    </div>
+                <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" placeholder="Votre nom" required>
                 </div>
 
                 <div class="form-group">
@@ -31,37 +24,31 @@ require __DIR__ . '/layout/header.php';
                 </div>
 
                 <div class="form-group">
-                    <label>Téléphone</label>
-                    <input type="tel" placeholder="+33 6 XX XX XX XX" required>
-                </div>
-
-                <div class="form-group">
                     <label>Mot de passe</label>
-                    <input type="password" placeholder="Minimum 8 caractères" required>
+                    <input type="password" placeholder="Mot de passe" required>
                 </div>
 
                 <div class="form-group">
                     <label>Confirmer le mot de passe</label>
-                    <input type="password" required>
+                    <input type="password" placeholder="Confirmez le mot de passe" required>
                 </div>
 
                 <label class="checkbox-label">
                     <input type="checkbox" required>
-                    <span>J'accepte les conditions</span>
+                    <span>
+                        J'accepte les <a href="#">conditions d'utilisation</a>
+                    </span>
                 </label>
 
-                <button type="submit" class="btn-submit">S'inscrire</button>
-
-                <div class="divider"><span>OU</span></div>
-
-                <button type="button" class="btn-google">
-                    <img src="https://www.google.com/favicon.ico" width="20">
-                    Continuer avec Google
+                <button type="submit" class="btn-submit">
+                    Créer mon compte
                 </button>
 
                 <p class="switch-form">
                     Déjà un compte ?
-                    <a href="<?= BASE_URL ?>/public/index.php?page=login">Connectez-vous</a>
+                    <a href="<?= BASE_URL ?>/public/index.php?page=login">
+                        Connectez-vous
+                    </a>
                 </p>
             </form>
         </div>
@@ -69,8 +56,17 @@ require __DIR__ . '/layout/header.php';
         <div class="auth-image">
             <div class="image-overlay">
                 <h2>Rejoignez VTC Rentium</h2>
-                <p>Accédez à nos services premium</p>
+                <p>Une expérience premium de location</p>
+
                 <div class="features">
                     <div class="feature-item"><span>✓</span> Inscription rapide</div>
-                    <div class="feature-item"><span>✓</span> Gestion simplifiée</div>
-                    <div class="feature-
+                    <div class="feature-item"><span>✓</span> Véhicules premium</div>
+                    <div class="feature-item"><span>✓</span> Support 24/7</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<?php require __DIR__ . '/layout/footer.php'; ?>

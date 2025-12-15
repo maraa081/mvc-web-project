@@ -14,8 +14,10 @@ if (!defined('BASE_URL')) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
 
+    <!-- CSS PAGE -->
     <?php if (!empty($pageCss)): ?>
         <?php foreach ($pageCss as $css): ?>
             <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/<?= $css ?>">

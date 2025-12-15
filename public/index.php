@@ -6,16 +6,15 @@ $page = $_GET['page'] ?? 'home';
 
 switch ($page) {
 
+    /* ================= FRONT ================= */
+
     case 'home':
         require_once '../app/controllers/HomeController.php';
         (new HomeController())->index();
         break;
 
-    case 'vehicles':
-        require_once '../app/controllers/VehicleController.php';
-        (new VehicleController())->index();
-        break;
     
+
     case 'vehicle':
         require_once '../app/controllers/VehicleController.php';
         (new VehicleController())->show();
@@ -36,7 +35,6 @@ switch ($page) {
         (new ContactController())->index();
         break;
 
-
     case 'booking':
         require_once '../app/controllers/BookingController.php';
         (new BookingController())->index();
@@ -56,43 +54,34 @@ switch ($page) {
         require_once '../app/controllers/UserController.php';
         (new UserController())->settings();
         break;
-
-    case 'blog':
-        require_once '../app/controllers/PageController.php';
-        (new PageController())->blog();
+    
+    case 'settings':
+        require_once '../app/controllers/UserController.php';
+        (new UserController())->settings();
         break;
 
-    case 'about':
-        require_once '../app/controllers/PageController.php';
-        (new PageController())->about();
-        break;
 
-    case 'contact':
-        require_once '../app/controllers/PageController.php';
-        (new PageController())->contact();
-        break;
+    /* ================= ADMIN ================= */
+
     case 'admin_clients':
-        require __DIR__ . '/../app/views/admin/clients.php';
-        break;
-    case 'admin_clients':
-        require __DIR__ . '/../app/views/admin/clients.php';
+        require_once '../app/controllers/AdminController.php';
+        (new AdminController())->clients();
         break;
 
     case 'admin_settings':
-        require __DIR__ . '/../app/views/admin/settings.php';
+        require_once '../app/controllers/AdminController.php';
+        (new AdminController())->settings();
         break;
-    case 'vehicles':
-        require __DIR__ . '/../app/views/vehicles.php';
-        break;
-    case 'admin_orders':
-        require __DIR__ . '/../app/views/admin/orders.php';
-        break;
-
     case 'admin_vehicles':
-        require __DIR__ . '/../app/views/admin/vehicles.php';
+        require_once '../app/controllers/AdminController.php';
+        (new AdminController())->vehicles();
         break;
 
+
+    /* ================= 404 ================= */
 
     default:
+        http_response_code(404);
         echo "Page non trouvée";
+        break;
 }

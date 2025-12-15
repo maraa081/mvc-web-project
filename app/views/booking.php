@@ -1,12 +1,18 @@
-<?php
-$pageCss = ['reservation.css'];
-$pageJs  = ['reservation.js'];
-require __DIR__ . '/layout/header.php';
-?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation | Rentium</title>
+
+    <!-- CSS BOOKING UNIQUEMENT -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/booking.css">
+</head>
+
+<body class="booking-page">
 
 <div class="reservation-container">
-    
-    <!-- Indicateurs d'étapes -->
+
+    <!-- STEPS -->
     <div class="steps-indicator">
         <div class="step active" data-step="1">
             <div class="step-circle">1</div>
@@ -29,106 +35,60 @@ require __DIR__ . '/layout/header.php';
         </div>
     </div>
 
-    <!-- Slider -->
+    <!-- SLIDER -->
     <div class="slider-wrapper">
         <div class="slider-container">
 
             <!-- SLIDE 1 -->
             <div class="slide active" data-slide="1">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h2>🚗 Détails du véhicule</h2>
-                        <p>Vérifiez les informations de votre véhicule</p>
-                    </div>
-
-                    <div class="car-details-card">
-                        <div class="car-image-container">
-                            <img src="<?= BASE_URL ?>/assets/images/X5.png" class="car-detail-image">
-                        </div>
-
-                        <div class="car-info">
-                            <h3 class="car-title">BMW X5</h3>
-                            <span class="car-category">🔵 SUV Premium</span>
-
-                            <div class="car-specs-list">
-                                <div class="spec-badge">⚙️ Automatique</div>
-                                <div class="spec-badge">⛽ Essence</div>
-                                <div class="spec-badge">👥 5 Places</div>
-                                <div class="spec-badge">❄️ Climatisation</div>
-                            </div>
-
-                            <div class="price-display">
-                                <span class="price-label">Prix par jour</span>
-                                <span class="price-value">25€</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn-next" onclick="nextSlide()">Continuer →</button>
-                </div>
+                <h2>🚗 Détails du véhicule</h2>
+                <p>BMW X5</p>
+                <button class="btn-next" onclick="nextSlide()">Continuer →</button>
             </div>
 
             <!-- SLIDE 2 -->
             <div class="slide" data-slide="2">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h2>📅 Sélection des dates</h2>
-                        <p>Choisissez vos dates de location</p>
-                    </div>
+                <h2>📅 Dates</h2>
 
-                    <div class="dates-card">
-                        <input type="date" id="startDate">
-                        <span>→</span>
-                        <input type="date" id="endDate">
-                    </div>
+                <input type="date" id="startDate">
+                <input type="date" id="endDate">
 
-                    <div class="buttons-group">
-                        <button class="btn-back-slide" onclick="prevSlide()">← Retour</button>
-                        <button class="btn-next" onclick="nextSlide()">Continuer →</button>
-                    </div>
-                </div>
+                <p>Jours : <span id="totalDays">0</span></p>
+                <p>Total : <span id="totalPrice">0€</span></p>
+
+                <button class="btn-back-slide" onclick="prevSlide()">← Retour</button>
+                <button class="btn-next" onclick="nextSlide()">Continuer →</button>
             </div>
 
             <!-- SLIDE 3 -->
             <div class="slide" data-slide="3">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h2>💳 Méthode de paiement</h2>
-                    </div>
+                <h2>💳 Paiement</h2>
 
-                    <div class="payment-options">
-                        <div class="payment-card active">Carte Visa</div>
-                        <div class="payment-card">PayPal</div>
-                        <div class="payment-card">Apple Pay</div>
-                        <div class="payment-card">Google Pay</div>
-                    </div>
-
-                    <div class="buttons-group">
-                        <button class="btn-back-slide" onclick="prevSlide()">← Retour</button>
-                        <button class="btn-next" onclick="nextSlide()">Continuer →</button>
-                    </div>
-                </div>
+                <button class="btn-back-slide" onclick="prevSlide()">← Retour</button>
+                <button class="btn-next" onclick="nextSlide()">Continuer →</button>
             </div>
 
             <!-- SLIDE 4 -->
             <div class="slide" data-slide="4">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h2>✅ Confirmation</h2>
-                    </div>
-
-                    <div class="confirmation-card">
-                        <p>BMW X5</p>
-                        <p>Merci pour votre réservation</p>
-                        <strong>Total : 0€</strong>
-                    </div>
-
-                    <button class="btn-confirm" onclick="confirmReservation()">🎉 Confirmer</button>
-                </div>
+                <h2>✅ Confirmation</h2>
+                <button class="btn-confirm" onclick="confirmReservation()">Confirmer</button>
             </div>
 
         </div>
     </div>
+
 </div>
 
-<?php require __DIR__ . '/layout/footer.php'; ?>
+<!-- MODAL -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <h2>Réservation confirmée 🎉</h2>
+        <button onclick="closeModal()">Retour accueil</button>
+    </div>
+</div>
+
+<!-- JS BOOKING UNIQUEMENT -->
+<script src="<?= BASE_URL ?>/assets/js/booking.js"></script>
+
+</body>
+</html>

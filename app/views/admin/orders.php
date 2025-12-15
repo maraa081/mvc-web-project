@@ -1,4 +1,6 @@
 <?php require __DIR__ . '/layout/header.php'; ?>
+<link rel="stylesheet" href="/test/assets/css/admin.css">
+<script src="/test/assets/js/admin.js" defer></script>
 
 <div class="content-scrollable">
 

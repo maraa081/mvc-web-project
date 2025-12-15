@@ -1,42 +1,40 @@
 <?php
 
-require_once __DIR__ . '/../models/VehicleModel.php';
-require_once __DIR__ . '/../models/UserModel.php';
-require_once __DIR__ . '/../models/ReservationModel.php';
-
 class AdminController
 {
-    public function dashboard()
+    private function render(string $view, array $data = [])
     {
-        require __DIR__ . '/../views/admin/dashboard.php';
-    }
+        extract($data);
 
-    public function vehicles()
-    {
-        $vehicleModel = new VehicleModel();
-        $vehicles = $vehicleModel->all();
+        ob_start();
+        require __DIR__ . '/../views/admin/' . $view . '.php';
+        $content = ob_get_clean();
 
-        require __DIR__ . '/../views/admin/vehicles.php';
+        // ⚠️ CHEMIN CORRIGÉ
+        require __DIR__ . '/../views/admin/layout/admin.php';
     }
 
     public function clients()
     {
-        $userModel = new UserModel();
-        $users = $userModel->all();
-
-        require __DIR__ . '/../views/admin/clients.php';
-    }
-
-    public function orders()
-    {
-        $reservationModel = new ReservationModel();
-        $reservations = $reservationModel->all();
-
-        require __DIR__ . '/../views/admin/orders.php';
+        $this->render('clients', [
+            'pageCss' => ['suivi-clients.css'],
+            'pageJs'  => ['script.js']
+        ]);
     }
 
     public function settings()
     {
-        require __DIR__ . '/../views/admin/settings.php';
+        $this->render('settings', [
+            'pageCss' => ['param_clients.css'],
+            'pageJs'  => ['p_script.js']
+        ]);
+    }
+
+    public function vehicles()
+    {
+        $this->render('vehicles', [
+            'pageCss' => ['CSS_rentium.css'],
+            'pageJs'  => ['JS_rentium.js']
+        ]);
     }
 }

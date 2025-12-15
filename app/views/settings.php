@@ -1,5 +1,5 @@
 <?php
-$pageCss = ['settings.css']; // si le CSS s'appelle autrement, on ajustera plus tard
+$pageCss = ['style.css']; // ton CSS global
 require __DIR__ . '/layout/header.php';
 ?>
 
@@ -22,7 +22,9 @@ require __DIR__ . '/layout/header.php';
             <input type="password" placeholder="Nouveau mot de passe">
         </div>
 
-        <button class="vehicle-btn">Enregistrer</button>
+        <button class="vehicle-btn">
+            Enregistrer
+        </button>
     </div>
 </div>
 
