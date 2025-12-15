@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - VTC Rentium</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<script src="auth.js"></script>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo_rentium">
+                <img src="rentium_modifié.png" alt="Logo Rentium" class="logo_rentium-icon">
+                <span>VTC Rentium</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="inedx2.php">Accueil</a></li>
+                    <li><a href="#">Véhicules</a></li>
+                    <li><a href="#">Détails</a></li>
+                    <li><a href="#">À propos de nous</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                </ul>
+            </nav>
+
+<div class="header-buttons">
+    <button class="btn-login" onclick="window.location.href='connexion.html'">Login</button>
+    <button class="btn-connect" onclick="window.location.href='inscription.html'">S'inscrire</button>
+</div>
+
+            
+          
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-wrapper">
+            <!-- Formulaire de Login -->
+            <div class="auth-box">
+                <div class="auth-header">
+                    <h1>Connexion</h1>
+                    <p>Bienvenue ! Connectez-vous à votre compte</p>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="exemple@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <input type="password" placeholder="Entrez votre mot de passe" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>Se souvenir de moi</span>
+                        </label>
+                            <a href="forgot_password.html" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Se connecter</button>
+
+                    <div class="divider">
+                        <span>OU</span>
+                    </div>
+
+                    <button type="button" class="btn-google">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" width="20">
+                        Continuer avec Google
+                    </button>
+
+                    <p class="switch-form">
+                        Vous n'avez pas de compte ? 
+                        <a href="inscription.html">Inscrivez-vous</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Image de côté -->
+            <div class="auth-image">
+                <div class="image-overlay">
+                    <h2>Réservez votre véhicule en quelques clics</h2>
+                    <p>Accédez à notre flotte premium et profitez d'un service exceptionnel</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <span>✓</span> Réservation rapide
+                        </div>
+                        <div class="feature-item">
+                            <span>✓</span> Véhicules premium
+                        </div>
+                        <div class="feature-item">
+                            <span>✓</span> Service 24/7
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-item">
+                <div class="footer-icon">
+                    <span>🚗</span>
+                </div>
+                <div>
+                    <div class="footer-label">Car Rental</div>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-icon green">
+                    <span>📍</span>
+                </div>
+                <div>
+                    <div class="footer-label">Address</div>
+                    <div class="footer-value">Issy-les-Moulineaux, 92130</div>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-icon green">
+                    <span>✉️</span>
+                </div>
+                <div>
+                    <div class="footer-label">Email</div>
+                    <div class="footer-value">contact@vtcrentium</div>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-icon green">
+                    <span>📞</span>
+                </div>
+                <div>
+                    <div class="footer-label">Phone</div>
+                    <div class="footer-value">+33 6 15 18 95 35</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-description-section">
+                <p class="footer-description">
+                    Chaque détail a été conçu pour allier confort et fluidité. Profitez d'un service performant, intuitif et agréable à chaque instant.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">X</a>
+                    <a href="#" class="social-icon">▶</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Useful links</h4>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Galerie</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">F.A.Q</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Vehicles</h4>
+                <ul>
+                    <li><a href="#">Berline</a></li>
+                    <li><a href="#">Cabriolet</a></li>
+                    <li><a href="#">Monospace</a></li>
+                    <li><a href="#">Pick-up</a></li>
+                    <li><a href="#">SUV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © Copyright VTC Rentium 2025
+        </div>
+    </footer>
+</body>
+</html>
