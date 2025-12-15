@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Véhicules Admin - VTC Rentium</title>
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS_rentium.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-header">
+      <img src="logo-rentium.png" alt="VTC Rentium" class="sidebar-logo-img">
+      <span class="sidebar-brand">VTC Rentium</span>
+    </div>
+
+    <div class="sidebar-section-title">MENU</div>
+
+    <ul class="sidebar-nav">
+      <!-- Tour de contrôle avec sous-menu -->
+      <li class="sidebar-item expandable" id="controlToggle">
+        <span class="icon">⌂</span>Tour de contrôle
+      </li>
+      <ul class="submenu" id="controlMenu">
+        <li class="submenu-item">📊 Dashboard</li>
+        <li class="submenu-item">📈 Analyses</li>
+      </ul>
+
+      <li class="sidebar-item"><span class="icon">🧾</span>Les commandes</li>
+      <li class="sidebar-item active"><span class="icon">🚗</span>Véhicules</li>
+      <li class="sidebar-item"><span class="icon">👤</span>Clients</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">Véhicules Admin</div>
+
+      <div class="search-wrapper">
+        <div class="search-input">
+          <span>🔍</span>
+          <input id="searchInput" type="text" placeholder="Rechercher un véhicule, une marque…">
+        </div>
+      </div>
+
+      <div class="user-pill">
+        <img src="logo-rentium.png" class="user-avatar" alt="Admin">
+        <span>Administrateur</span>
+      </div>
+    </header>
+
+    <!-- HEADER PAGE -->
+    <section class="page-header">
+      <div class="page-title-group">
+        <span class="page-title-dot"></span>
+        <h1 class="page-title">Véhicules</h1>
+      </div>
+
+      <div class="right-buttons">
+        <button class="btn-add">+ Ajouter un véhicule</button>
+        <button class="btn-delete">🗑 Supprimer des véhicules</button>
+      </div>
+    </section>
+
+    <!-- FILTRE PRINCIPAL : bouton "Filtre" -->
+    <section class="filter-bar">
+      <button class="filter-chip" id="typeFilterToggle" type="button">
+        <span class="filter-icon">⚙</span>
+        <span id="typeFilterLabel">Tous les types</span>
+      </button>
+
+      <!-- Dropdown des types -->
+      <div class="filter-dropdown" id="typeFilterMenu">
+        <button class="filter-option" data-filter="all">Tous les types</button>
+        <button class="filter-option" data-filter="Berline">Berlines</button>
+        <button class="filter-option" data-filter="SUV">SUV</button>
+        <button class="filter-option" data-filter="Électrique">Électriques</button>
+      </div>
+    </section>
+
+    <!-- BARRE SECONDAIRE : concession / statut / tri -->
+    <section class="filter-bar-secondary">
+      <select id="concessionFilter" class="filter-select">
+        <option value="all">Toutes les concessions</option>
+        <option value="1">Concession 1</option>
+        <option value="2">Concession 2</option>
+      </select>
+
+      <select id="statusFilter" class="filter-select">
+        <option value="all">Tous les statuts</option>
+        <option value="disponible">🟢 Disponibles</option>
+        <option value="entretien">🟡 En entretien</option>
+        <option value="indisponible">🔴 Indisponibles</option>
+      </select>
+
+      <select id="sortSelect" class="filter-select">
+        <option value="none">Tri par défaut</option>
+        <option value="prix-asc">Prix croissant</option>
+        <option value="prix-desc">Prix décroissant</option>
+        <option value="marque-az">Marque A → Z</option>
+      </select>
+    </section>
+
+    <!-- GRILLE DES VÉHICULES -->
+  <section class="cards-wrapper">
+
+  <!-- ✅ Résumé des résultats -->
+    <div class="results-summary">
+      <span id="resultsCount">0 véhicules trouvés</span>
+      <span class="dot-separator">•</span>
+      <span id="availableCount">0 disponibles</span>
+    </div>
+
+  <!-- Grille des cartes -->
+    <div id="carGrid" class="card-grid"></div>
+
+  <!-- Bouton "Afficher plus" -->
+    <div class="load-more-wrapper">
+      <button id="loadMoreBtn" class="btn-load-more">
+        + Afficher plus
+      </button>
+    </div>
+</section>
+
+
+  </main>
+</div>
+
+<script src="JS_rentium.js"></script>
+</body>
+</html>
