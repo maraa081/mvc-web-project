@@ -1,317 +1,222 @@
-// ================== 1. DONNÉES VÉHICULES ==================
-let voitures = [
-  { plaque: "VT-001-AAA", marque: "Toyota",    modele: "Prius+",          type: "Berline Hybride",  couleur: "Blanche",      prix: 70,  concession: 1, statut: "disponible" },
-  { plaque: "VT-002-AAB", marque: "Toyota",    modele: "Corolla Hybride", type: "Berline",          couleur: "Gris",         prix: 65,  concession: 1, statut: "disponible" },
-  { plaque: "VT-003-AAC", marque: "Toyota",    modele: "Camry Hybride",   type: "Berline",          couleur: "Noire",        prix: 80,  concession: 1, statut: "entretien" },
-  { plaque: "VT-004-AAD", marque: "Toyota",    modele: "RAV4 Hybride",    type: "SUV",              couleur: "Noir",         prix: 85,  concession: 1, statut: "disponible" },
-  { plaque: "VT-005-AAE", marque: "Lexus",     modele: "ES 300h",         type: "Berline Luxe",     couleur: "Noir",         prix: 120, concession: 2, statut: "disponible" },
-  { plaque: "VT-006-AAF", marque: "Lexus",     modele: "UX 250h",         type: "SUV Compact",      couleur: "Gris",         prix: 90,  concession: 2, statut: "indisponible" },
-  { plaque: "VT-007-AAG", marque: "Lexus",     modele: "NX 350h",         type: "SUV Premium",      couleur: "Noir",         prix: 130, concession: 2, statut: "disponible" },
-  { plaque: "VT-008-AAH", marque: "Hyundai",   modele: "Ioniq Hybrid",    type: "Berline Hybride",  couleur: "Blanche",      prix: 60,  concession: 1, statut: "disponible" },
-  { plaque: "VT-009-AAI", marque: "Hyundai",   modele: "Tucson Hybrid",   type: "SUV",              couleur: "Gris",         prix: 75,  concession: 1, statut: "entretien" },
-  { plaque: "VT-010-AAJ", marque: "Kia",       modele: "Niro Hybrid",     type: "SUV Compact",      couleur: "Blanc",        prix: 65,  concession: 1, statut: "disponible" },
+const PROJECT_ROOT = "/rentium_mvc_1";
+const API_LIST = `${PROJECT_ROOT}/api/voitures_list.php`;
 
-  { plaque: "VT-011-AAK", marque: "Tesla",     modele: "Model 3",         type: "Électrique",       couleur: "Noire",        prix: 95,  concession: 2, statut: "disponible" },
-  { plaque: "VT-012-AAL", marque: "Tesla",     modele: "Model Y",         type: "Électrique",       couleur: "Blanche",      prix: 110, concession: 2, statut: "disponible" },
-  { plaque: "VT-013-AAM", marque: "Mercedes",  modele: "EQE",             type: "Électrique Luxe",  couleur: "Gris",         prix: 140, concession: 2, statut: "indisponible" },
-  { plaque: "VT-014-AAN", marque: "BMW",       modele: "i4",              type: "Électrique",       couleur: "Noire",        prix: 135, concession: 2, statut: "disponible" },
-  { plaque: "VT-015-AAO", marque: "Kia",       modele: "EV6",             type: "Électrique",       couleur: "Rouge",        prix: 100, concession: 2, statut: "disponible" },
+const INITIAL_COUNT = 6;
+const STEP_COUNT = 3;
 
-  { plaque: "VT-016-AAP", marque: "Mercedes",  modele: "Classe E",        type: "Berline Luxe",     couleur: "Noire",        prix: 150, concession: 2, statut: "disponible" },
-  { plaque: "VT-017-AAQ", marque: "BMW",       modele: "Série 5",         type: "Berline Luxe",     couleur: "Gris foncé",   prix: 145, concession: 2, statut: "disponible" },
-  { plaque: "VT-018-AAR", marque: "Audi",      modele: "A6",              type: "Berline Premium",  couleur: "Noir métal",   prix: 140, concession: 2, statut: "entretien" },
-  { plaque: "VT-019-AAS", marque: "Skoda",     modele: "Superb",          type: "Berline",          couleur: "Blanc nacré",  prix: 85,  concession: 1, statut: "disponible" },
-  { plaque: "VT-020-AAT", marque: "Volkswagen",modele: "Passat",          type: "Berline",          couleur: "Argent",       prix: 75,  concession: 1, statut: "disponible" }
-];
+const UI = {
+  grid: "#carGrid",
+  loadMoreBtn: "#loadMoreBtn",
+  resultsCount: "#resultsCount",
+  availableCount: "#availableCount",
 
-// ================== 2. ÉTAT ==================
-const INITIAL_VISIBLE = 6;  // toujours 6 au départ
-const LOAD_STEP = 3;        // +3 à chaque clic
+  search: "#searchInput",
+  concession: "#concessionFilter",
+  statut: "#statusFilter",
+  sort: "#sortSelect",
 
-let currentSearch = "";
-let currentTypeFilter = "all";
-let currentConcessionFilter = "all";
-let currentStatusFilter = "all";
-let currentSort = "none";
+  typeToggle: "#typeFilterToggle",
+  typeMenu: "#typeFilterMenu",
+  typeLabel: "#typeFilterLabel",
+  typeOptions: "#typeFilterMenu .filter-option"
+};
 
-let visibleCount = INITIAL_VISIBLE;
+const state = {
+  type: "all",
+  offset: 0,
+  total: 0
+};
 
-// mode suppression
-let deleteMode = false;
-let selectedForDelete = new Set();
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
 
-// ================== 3. UTILS ==================
-function resetVisibleCount() {
-  visibleCount = INITIAL_VISIBLE;
+function setText(sel, txt) {
+  const el = $(sel);
+  if (el) el.textContent = txt;
 }
 
-function statutBadge(statut) {
-  switch (statut) {
-    case "disponible":
-      return `<span class="status-badge status-disponible">🟢 Disponible</span>`;
-    case "entretien":
-      return `<span class="status-badge status-entretien">🟡 En entretien</span>`;
-    case "indisponible":
-      return `<span class="status-badge status-indisponible">🔴 Indisponible</span>`;
-    default:
-      return "";
+function setVisible(sel, visible) {
+  const el = $(sel);
+  if (!el) return;
+  el.style.display = visible ? "" : "none";
+}
+
+/* ============ API ============ */
+function buildUrl(limit, offset) {
+  const params = new URLSearchParams();
+
+  const q = ($(UI.search)?.value ?? "").trim();
+  const concession = ($(UI.concession)?.value ?? "all");
+  const statut = ($(UI.statut)?.value ?? "all");
+  const sort = ($(UI.sort)?.value ?? "none");
+
+  if (q) params.set("q", q);
+
+  params.set("type", state.type || "all");
+  params.set("concession", concession);
+  params.set("statut", statut);
+  params.set("sort", sort);
+
+  params.set("limit", String(limit));
+  params.set("offset", String(offset));
+
+  return `${API_LIST}?${params.toString()}`;
+}
+
+async function fetchPage(limit, offset) {
+  const url = buildUrl(limit, offset);
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status} - ${url}`);
+
+  const text = await res.text();
+  let json;
+  try { json = JSON.parse(text); }
+  catch {
+    console.error("API non-JSON (réponse brute):", text);
+    throw new Error("API non-JSON (voir console)");
   }
+
+  if (!json.success) throw new Error(json.error || "Erreur API");
+  return json;
 }
 
+/* ============ RENDER ============ */
+function cardHTML(v) {
+  const imgFile = (v.image && String(v.image).trim() !== "") ? String(v.image).trim() : "logo-rentium.png";
+  const imgPath = `${PROJECT_ROOT}/${imgFile}`;
 
-function createCard(v) {
-  const isSelected = selectedForDelete.has(v.plaque);
   return `
-    <article class="vehicle-card ${isSelected ? "selected-delete" : ""}"
-             data-plaque="${v.plaque}">
-      
-      <div class="vehicle-img-placeholder"></div>
-
-      <span class="heart" data-plaque="${v.plaque}">♡</span>
-
-      <div class="brand">${v.marque}</div>
-      <div class="type">${v.modele} · ${v.type} · ${v.couleur}</div>
-
-      <div class="price-row">
-        <div class="price">${v.prix}€</div>
-        <div class="per-day">Par jour</div>
+    <article class="vehicule-card">
+      <div class="vehicule-card__img">
+        <img src="${imgPath}" alt="${v.marque ?? ""} ${v.modele ?? ""}" loading="lazy"
+             onerror="this.onerror=null;this.src='${PROJECT_ROOT}/logo-rentium.png';">
       </div>
 
-      <div class="infos-row">
-        <span>🔖 ${v.plaque}</span>
-        <span>${statutBadge(v.statut)}</span>
-      </div>
+      <div class="vehicule-card__body">
+        <div class="vehicule-card__title">
+          <h3>${v.marque ?? ""} ${v.modele ?? ""}</h3>
+          ${v.statut ? `<span class="badge">${v.statut}</span>` : ""}
+        </div>
 
-      <div class="infos-row">
-        <span>🏢 Concession ${v.concession}</span>
-        <span></span>
+        <div class="vehicule-card__meta">
+          ${v.type ? `<span>${v.type}</span>` : ""}
+          ${v.annee ? `<span>${v.annee}</span>` : ""}
+          ${v.kilometrage !== undefined ? `<span>${v.kilometrage} km</span>` : ""}
+          ${v.concession ? `<span>Concession ${v.concession}</span>` : ""}
+        </div>
+
+        <div class="vehicule-card__footer">
+          ${v.prix !== undefined ? `<div class="vehicule-card__price">${v.prix} €</div>` : ""}
+        </div>
       </div>
     </article>
   `;
 }
 
-function getFilteredCars() {
-  const q = currentSearch.toLowerCase();
-
-  let filtered = voitures.filter(v => {
-    const inSearch =
-      v.marque.toLowerCase().includes(q) ||
-      v.modele.toLowerCase().includes(q) ||
-      v.type.toLowerCase().includes(q) ||
-      v.couleur.toLowerCase().includes(q) ||
-      v.plaque.toLowerCase().includes(q);
-
-    let inType = true;
-    if (currentTypeFilter !== "all") {
-      const t = currentTypeFilter.toLowerCase();
-      inType = v.type.toLowerCase().includes(t);
-    }
-
-    let inConcession = true;
-    if (currentConcessionFilter !== "all") {
-      inConcession = v.concession === Number(currentConcessionFilter);
-    }
-
-    let inStatus = true;
-    if (currentStatusFilter !== "all") {
-      inStatus = v.statut === currentStatusFilter;
-    }
-
-    return inSearch && inType && inConcession && inStatus;
-  });
-
-  // Tri
-  if (currentSort === "prix-asc") {
-    filtered = [...filtered].sort((a, b) => a.prix - b.prix);
-  } else if (currentSort === "prix-desc") {
-    filtered = [...filtered].sort((a, b) => b.prix - a.prix);
-  } else if (currentSort === "marque-az") {
-    filtered = [...filtered].sort((a, b) =>
-      a.marque.localeCompare(b.marque, "fr", { sensitivity: "base" })
-    );
-  }
-
-  return filtered;
+function clearGrid() {
+  const grid = $(UI.grid);
+  if (grid) grid.innerHTML = "";
 }
 
-// ================== 4. RENDU ==================
-function renderCars() {
-  const grid = document.getElementById("carGrid");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
+function appendCards(rows) {
+  const grid = $(UI.grid);
   if (!grid) return;
+  grid.insertAdjacentHTML("beforeend", rows.map(cardHTML).join(""));
+}
 
-  const filtered = getFilteredCars();
-  const carsToShow = filtered.slice(0, visibleCount);
-    // ✅ Mise à jour du résumé
-  const resultsCountEl = document.getElementById("resultsCount");
-  const availableCountEl = document.getElementById("availableCount");
+function updateSummary(total, disponibles) {
+  setText(UI.resultsCount, `${total} véhicules trouvés`);
+  setText(UI.availableCount, `${disponibles} disponibles`);
+}
 
-  if (resultsCountEl && availableCountEl) {
-    const total = filtered.length;
-    const disponibles = filtered.filter(v => v.statut === "disponible").length;
+function updateLoadMore() {
+  setVisible(UI.loadMoreBtn, state.offset < state.total);
+}
 
-    resultsCountEl.textContent = `${total} véhicule${total > 1 ? "s" : ""} trouvés`;
-    availableCountEl.textContent = `${disponibles} disponible${disponibles > 1 ? "s" : ""}`;
+/* ============ LOAD ============ */
+async function loadFirst() {
+  state.offset = 0;
+  clearGrid();
+
+  const json = await fetchPage(INITIAL_COUNT, state.offset);
+
+  state.total = json.total;
+  updateSummary(json.total, json.disponibles);
+
+  appendCards(json.data);
+  state.offset += json.data.length;
+
+  updateLoadMore();
+}
+
+async function loadMore() {
+  const json = await fetchPage(STEP_COUNT, state.offset);
+
+  state.total = json.total;
+  updateSummary(json.total, json.disponibles);
+
+  appendCards(json.data);
+  state.offset += json.data.length;
+
+  updateLoadMore();
+}
+
+/* ============ TYPE DROPDOWN ============ */
+function bindTypeDropdown() {
+  const toggle = $(UI.typeToggle);
+  const menu = $(UI.typeMenu);
+  const label = $(UI.typeLabel);
+
+  if (!toggle || !menu || !label) return;
+
+  menu.style.display = "none";
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.style.display = (menu.style.display === "none") ? "" : "none";
+    toggle.setAttribute("aria-expanded", menu.style.display !== "none" ? "true" : "false");
+  });
+
+  $$(UI.typeOptions).forEach(btn => {
+    btn.addEventListener("click", async () => {
+      state.type = btn.dataset.filter || "all";
+      label.textContent = (state.type === "all") ? "Tous les types" : state.type;
+      menu.style.display = "none";
+      toggle.setAttribute("aria-expanded", "false");
+      await loadFirst();
+    });
+  });
+
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+/* ============ INIT ============ */
+document.addEventListener("DOMContentLoaded", async () => {
+  if (!$(UI.grid)) return;
+
+  $(UI.loadMoreBtn)?.addEventListener("click", loadMore);
+
+  $(UI.concession)?.addEventListener("change", loadFirst);
+  $(UI.statut)?.addEventListener("change", loadFirst);
+  $(UI.sort)?.addEventListener("change", loadFirst);
+
+  const s = $(UI.search);
+  if (s) {
+    s.addEventListener("input", () => {
+      clearTimeout(s.__t);
+      s.__t = setTimeout(loadFirst, 200);
+    });
   }
 
+  bindTypeDropdown();
 
-  grid.innerHTML = carsToShow.map(createCard).join("");
-
-  attachHeartListeners();
-  attachCardSelectionListeners();
-
-  if (!loadMoreBtn) return;
-  loadMoreBtn.style.display =
-    visibleCount >= filtered.length ? "none" : "inline-flex";
-}
-
-function attachHeartListeners() {
-  const hearts = document.querySelectorAll(".heart");
-  hearts.forEach(heart => {
-    heart.addEventListener("click", (e) => {
-      e.stopPropagation();
-      heart.classList.toggle("filled");
-      heart.textContent = heart.classList.contains("filled") ? "♥" : "♡";
-    });
-  });
-}
-
-function attachCardSelectionListeners() {
-  const cards = document.querySelectorAll(".vehicle-card");
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      if (!deleteMode) return;
-
-      const plaque = card.dataset.plaque;
-      if (selectedForDelete.has(plaque)) {
-        selectedForDelete.delete(plaque);
-        card.classList.remove("selected-delete");
-      } else {
-        selectedForDelete.add(plaque);
-        card.classList.add("selected-delete");
-      }
-    });
-  });
-}
-
-// ================== 5. INTERACTIONS ==================
-
-// Recherche
-const searchInput = document.getElementById("searchInput");
-if (searchInput) {
-  searchInput.addEventListener("input", (e) => {
-    currentSearch = e.target.value.trim();
-    resetVisibleCount();
-    renderCars();
-  });
-}
-
-// Filtre principal (types)
-const typeFilterToggle = document.getElementById("typeFilterToggle");
-const typeFilterMenu   = document.getElementById("typeFilterMenu");
-const typeFilterLabel  = document.getElementById("typeFilterLabel");
-
-if (typeFilterToggle && typeFilterMenu && typeFilterLabel) {
-  typeFilterToggle.addEventListener("click", () => {
-    typeFilterMenu.classList.toggle("open");
-  });
-
-  document.querySelectorAll(".filter-option").forEach(option => {
-    option.addEventListener("click", () => {
-      const value = option.dataset.filter || "all";
-      currentTypeFilter = value;
-      typeFilterLabel.textContent = option.textContent;
-      resetVisibleCount();
-      typeFilterMenu.classList.remove("open");
-      renderCars();
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!typeFilterToggle.contains(e.target) && !typeFilterMenu.contains(e.target)) {
-      typeFilterMenu.classList.remove("open");
-    }
-  });
-}
-
-// Filtre concession
-const concessionSelect = document.getElementById("concessionFilter");
-if (concessionSelect) {
-  concessionSelect.addEventListener("change", (e) => {
-    currentConcessionFilter = e.target.value;
-    resetVisibleCount();
-    renderCars();
-  });
-}
-
-// Filtre statut
-const statusSelect = document.getElementById("statusFilter");
-if (statusSelect) {
-  statusSelect.addEventListener("change", (e) => {
-    currentStatusFilter = e.target.value;
-    resetVisibleCount();
-    renderCars();
-  });
-}
-
-// Tri
-const sortSelect = document.getElementById("sortSelect");
-if (sortSelect) {
-  sortSelect.addEventListener("change", (e) => {
-    currentSort = e.target.value;
-    resetVisibleCount();
-    renderCars();
-  });
-}
-
-// Bouton "Afficher plus" (+)
-const loadMoreBtn = document.getElementById("loadMoreBtn");
-if (loadMoreBtn) {
-  loadMoreBtn.addEventListener("click", () => {
-    visibleCount += LOAD_STEP;
-    renderCars();
-  });
-}
-
-// Supprimer des véhicules
-const deleteBtn = document.querySelector(".btn-delete");
-if (deleteBtn) {
-  deleteBtn.addEventListener("click", () => {
-    if (!deleteMode) {
-      deleteMode = true;
-      selectedForDelete.clear();
-      document.body.classList.add("delete-mode");
-      deleteBtn.textContent = "❌ Supprimer la sélection";
-    } else {
-      if (selectedForDelete.size === 0) {
-        alert("Sélectionne au moins un véhicule à supprimer.");
-        return;
-      }
-      const ok = confirm(`Supprimer ${selectedForDelete.size} véhicule(s) ?`);
-      if (!ok) return;
-
-      voitures = voitures.filter(v => !selectedForDelete.has(v.plaque));
-      selectedForDelete.clear();
-      deleteMode = false;
-      document.body.classList.remove("delete-mode");
-      deleteBtn.textContent = "🗑 Supprimer des véhicules";
-
-      resetVisibleCount();
-      renderCars();
-    }
-  });
-}
-
-// Menu Tour de contrôle
-const controlToggle = document.getElementById("controlToggle");
-const controlMenu   = document.getElementById("controlMenu");
-
-if (controlToggle && controlMenu) {
-  controlToggle.addEventListener("click", () => {
-    controlMenu.classList.toggle("open");
-  });
-}
-
-// ================== 6. INIT ==================
-resetVisibleCount();
-renderCars();
+  try {
+    await loadFirst();
+  } catch (e) {
+    console.error(e);
+    alert(`Impossible de charger les véhicules. Détail: ${e.message}`);
+  }
+});
