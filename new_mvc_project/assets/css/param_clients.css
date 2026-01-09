@@ -1,0 +1,754 @@
+/* --- RESET ET GLOBAL --- */
+/* On applique la police Inter seulement au contenu des paramètres */
+.settings-wrapper {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* On applique le box-sizing seulement aux éléments DANS les paramètres */
+.settings-wrapper * {
+    box-sizing: border-box;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 0px solid #e5e7eb;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+/* Gestion de l'image logo principale */
+.logo-img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-nav a, .nav-link {
+    text-decoration: none;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Gestion des icônes images dans la sidebar */
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    /* Si vos icones sont noires et que vous les voulez grises comme la maquette :
+       opacity: 0.6; 
+    */
+}
+
+.sidebar-nav a:hover {
+    background-color: #f9fafb;
+    color: #111;
+}
+
+.active-settings {
+    background-color: #ecfdf5; 
+    color: #065f46;
+    font-weight: 600;
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.top-bar {
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 400px;
+}
+
+/* Icone loupe image */
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    opacity: 0.8; /* Légère transparence pour le style */
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 15px 12px 40px;
+    border-radius: 50px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-size: 14px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notif-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 4px 12px 4px 4px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.user-profile span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.dropdown-icon {
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+}
+
+/* --- PAGE CONTENT --- */
+.content-scrollable {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px;
+}
+
+.page-card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1000px; /* Largeur max confortable */
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #111827;
+}
+
+/* TABS */
+.tabs-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-link {
+    text-decoration: none;
+    color: #6b7280;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tab-link.active {
+    /*background-color: #f3e8ff;*/
+    background-color: #ecfdf5;
+    /*color: #6b21a8;*/
+    color: #065f46;
+    font-weight: 600;
+}
+
+/* SECTION HEADER */
+.section-header {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1f2937;
+    display: block;
+}
+
+.section-header p {
+    color: #6b7280;
+    font-size: 14px;
+    display: block;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #f3f4f6;
+    margin: 25px 0;
+}
+
+/* FORM STYLING */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.input-icon-wrapper {
+    position: relative;
+}
+
+/* Icones à l'intérieur des inputs */
+.input-img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+.input-icon-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-icon-wrapper input:focus {
+    border-color: #a855f7;
+}
+
+.input-icon-wrapper.plain-input input {
+    padding-left: 15px;
+}
+
+/* PHOTO SECTION */
+.photo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-info h3 {
+    font-size: 14px;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.photo-info p {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.photo-preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    overflow: hidden;
+}
+
+.preview-img {
+    width: 30px;
+    height: auto;
+}
+
+.photo-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-text.delete {
+    color: #6b7280;
+}
+
+.btn-text.update {
+    color: #9333ea;
+    font-weight: 600;
+}
+
+/* SOCIAL SECTION */
+.social-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social-label {
+    width: 30%;
+}
+.social-label h3 {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.social-inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-container {
+    position: relative;
+}
+
+/* Style de base des menus déroulants */
+.dropdown-menu {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 55px; /* Juste en dessous du header */
+    right: 0;
+    width: 280px;
+    margin-top: 10px; 
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    z-index: 1000;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Animation d'apparition douce */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Classe pour afficher le menu (ajoutée via JS) */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* --- Style spécifique Dropdown Notification --- */
+.notif-dropdown {
+    width: 320px;
+    right: -80px; /* Ajustement pour centrer par rapport à la cloche */
+}
+
+.dropdown-header {
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f6;
+    font-weight: 600;
+    color: #111;
+    font-size: 14px;
+}
+
+.dropdown-content.empty-state {
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.empty-state img {
+    width: 40px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* --- Style spécifique Dropdown Profil --- */
+.profile-dropdown {
+    width: 220px;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 8px 0;
+}
+
+.profile-dropdown li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.profile-dropdown li a:hover {
+    background-color: #f9fafb;
+    color: #111;
+}
+
+.menu-icon {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+}
+
+.divider-li {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 8px 0;
+}
+
+.logout-link {
+    color: #ef4444 !important; /* Rouge pour déconnexion */
+}
+.logout-link:hover {
+    background-color: #fef2f2 !important;
+}
+
+
+
+/* =========================================
+   STYLE DES ONGLETS DYNAMIQUES & CONTENU
+   ========================================= */
+
+/* Gestion de l'affichage */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Pour garder la même taille min que la page profil */
+    min-height: 600px; 
+}
+
+.tab-content.active-content {
+    display: block;
+    animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- BOUTONS --- */
+.form-actions-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #10b981; /* Violet */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background-color: #059766; }
+
+.btn-outlined {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* --- STYLE SPÉCIFIQUE INFO & RGPD --- */
+.info-box-gdpr {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 8px;
+}
+.info-box-gdpr h3 { font-size: 14px; margin-bottom: 5px; }
+.info-box-gdpr p { font-size: 13px; color: #6b7280; margin-bottom: 15px; }
+
+/* --- STYLE SPÉCIFIQUE PASSWORD --- */
+/* 1. Augmenter l'espace général entre chaque ligne du formulaire */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Augmenté (était probablement à 15px ou 20px) */
+}
+
+/* 2. Aérer l'espace entre le Label et l'Input */
+.input-group label {
+    font-size: 14px;
+    color: #4b5563; /* Gris lisible */
+    font-weight: 500;
+    margin-bottom: 0px; /* Ajoute de l'espace sous le titre du champ */
+    display: block;
+}
+
+/* 3. Aérer l'espace horizontal entre les deux colonnes (Nouveau mot de passe / Confirmer) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* Augmenté pour écarter les colonnes */
+}
+
+/* 4. Inputs plus confortables (plus hauts) */
+/* 3. L'input lui-même : Ajout du padding-left CRUCIAL */
+.input-icon-wrapper input {
+    width: 100%;
+    /* C'EST ICI QUE SE TROUVE LA SOLUTION :
+       45px de padding à gauche = espace pour l'icône + espace visuel.
+       Le texte commencera donc à 45px du bord.
+    */
+    padding: 14px 15px 14px 45px !important; 
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #1f2937;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+
+/* Effet de focus joli */
+.input-icon-wrapper input:focus {
+    border-color: #9333ea; /* Violet au focus */
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+/* 4. GESTION DES CHAMPS SANS ICÔNES (plain-input) */
+/* Il faut réinitialiser le padding gauche pour les champs qui n'ont pas d'image */
+.input-icon-wrapper.plain-input input {
+    padding-left: 15px !important; /* Retour à un padding normal */
+}
+
+/* 5. Section "Exigences de sécurité" : Lui donner un vrai bloc aéré */
+.password-requirements {
+    margin-top: 10px;      /* Espace au-dessus */
+    margin-bottom: 30px;   /* Espace en dessous (avant le bouton) */
+    padding: 20px;         /* Espace interne */
+    background-color: #f9fafb; /* Fond gris très clair pour séparer visuellement */
+    border-radius: 8px;    /* Coins arrondis */
+    border: 1px solid #e5e7eb; /* Bordure subtile */
+}
+
+.password-requirements h4 {
+    margin-bottom: 10px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.password-requirements ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #6b7280;
+}
+
+.password-requirements li {
+    margin-bottom: 5px; /* Espace entre les puces */
+}
+
+/* 6. Bouton : S'assurer qu'il a de l'espace au-dessus */
+.form-actions-right {
+    margin-top: 10px; 
+}
+
+/* --- STYLE SPÉCIFIQUE EMAIL --- */
+.input-hint {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+/* --- TOGGLE SWITCH (NOTIFICATIONS) --- */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notif-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+.notif-item:last-child { border-bottom: none; }
+
+.notif-text h4 { font-size: 14px; color: #1f2937; margin-bottom: 2px; }
+.notif-text p { font-size: 13px; color: #6b7280; }
+
+/* Le Switch CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e5e7eb;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+input:checked + .slider { background-color: #10b981; /* Vert actif */ }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* Switch arrondi */
+.slider.round { border-radius: 24px; }
+.slider.round:before { border-radius: 50%; }
+
+/* Disabled state */
+.slider.disabled { opacity: 0.5; cursor: not-allowed; }
+
+
+/* On annule le reset global qui pourrait casser le header */
+    .settings-wrapper * { box-sizing: border-box; }
+    
+    /* Conteneur pour centrer la page et mettre le fond gris */
+    .settings-wrapper {
+        background-color: #f3f4f6; /* Gris clair */
+        min-height: calc(100vh - 140px); /* Prend toute la hauteur moins le header/footer */
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+/* Masquer les éléments qu'on ne veut pas (sécurité) */
+    .sidebar, .top-bar, .app-container { display: none !important; }
+
+
+/* --- ANIMATION ALERTES --- */
+.alert {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}
+
+.alert.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* Empêche de cliquer pendant la disparition */
+}
