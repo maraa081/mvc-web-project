@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ============================================================
-       3. GESTION DE LA PHOTO DE PROFIL (VERSION PHP/MVC)
+       3. GESTION DE LA PHOTO DE PROFIL 
        ============================================================ */
     
     const fileInput = document.getElementById('real-file-input');

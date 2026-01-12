@@ -1,28 +1,37 @@
-<?php
-$pageCss = [];
-require __DIR__ . '/../layout/header.php';
-?>
+<?php require __DIR__ . '/layout/header.php'; ?>
 
-<section class="static-page">
+<div class="blog-hero">
     <div class="container">
-        <h1>Notre Blog</h1>
-
-        <p>
-            Bienvenue sur le blog de <strong>VTC Rentium</strong>.
-            Vous trouverez ici des articles autour de la mobilité,
-            de la location de véhicules et des conseils pour vos déplacements.
-        </p>
-
-        <ul class="simple-list">
-            <li>🚗 Comment choisir le bon véhicule pour vos besoins</li>
-            <li>📍 Les meilleures destinations à découvrir en voiture</li>
-            <li>💡 Conseils pour une location sereine</li>
-        </ul>
-
-        <p class="muted">
-            De nouveaux articles arrivent bientôt.
-        </p>
+        <h1>Le Magazine Rentium</h1>
+        <p>Actualités, conseils et guide de voyage pour vos déplacements.</p>
     </div>
-</section>
+</div>
 
-<?php require __DIR__ . '/../layout/footer.php'; ?>
+<div class="container blog-container">
+    <div class="blog-grid">
+        <?php foreach ($articles as $art): ?>
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="<?= BASE_URL ?>/<?= htmlspecialchars($art['image_url']) ?>" alt="<?= htmlspecialchars($art['titre']) ?>">
+                    <span class="blog-category"><?= htmlspecialchars($art['categorie']) ?></span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date"><?= date('d M Y', strtotime($art['date_creation'])) ?></span>
+                        <span class="author">Par <?= htmlspecialchars($art['auteur']) ?></span>
+                    </div>
+                    <a href="index.php?page=blog&id=<?= $art['id_article'] ?>" class="blog-title-link">
+                        <h3><?= htmlspecialchars($art['titre']) ?></h3>
+                    </a>
+                    <p class="blog-excerpt"><?= htmlspecialchars($art['accroche']) ?></p>
+                    <a href="index.php?page=blog&id=<?= $art['id_article'] ?>" class="read-more">Lire l'article &rarr;</a>
+                </div>
+            </article>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/blog.css">
+<script src="<?= BASE_URL ?>/assets/js/blog.js"></script>
+
+<?php require __DIR__ . '/layout/footer.php'; ?>

@@ -51,11 +51,20 @@ switch ($page) {
         require_once '../app/controllers/BookingController.php';
         (new BookingController())->store();
         break;
+    
+    // --- CORRECTION ICI ---
     case 'blog':
-        require_once '../app/controllers/StaticController.php';
-        (new StaticController())->blog();
+        // On charge le contrôleur dédié au Blog dynamique
+        require_once '../app/controllers/BlogController.php';
+        (new BlogController())->index(); 
         break;
 
+    case 'blog_rate':
+        require_once '../app/controllers/BlogController.php';
+        (new BlogController())->rate();
+        break;
+
+    // Pour About et Contact, on utilise StaticController
     case 'about':
         require_once '../app/controllers/StaticController.php';
         (new StaticController())->about();
@@ -70,6 +79,16 @@ switch ($page) {
         require_once '../app/controllers/SettingsController.php';
         $controller = new SettingsController();
         $controller->index();
+        break;
+
+        case 'faq':
+        require_once '../app/controllers/StaticController.php';
+        (new StaticController())->faq();
+        break;
+
+    case 'cgu':
+        require_once '../app/controllers/StaticController.php';
+        (new StaticController())->cgu();
         break;
 
     default:
