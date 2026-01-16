@@ -1,5 +1,5 @@
 <?php
-$pageCss = ['vehicles.css', 'style2.css'];
+$pageCss = ['vehicles.css'];
 require __DIR__ . '/layout/header.php';
 ?>
 
