@@ -1,0 +1,99 @@
+/* --- HERO SECTION --- */
+.contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/vehicles/BMW\ Série\ 5.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 50px;
+}
+.contact-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.contact-hero p { font-size: 1.2rem; opacity: 0.9; }
+
+/* --- LAYOUT PRINCIPAL (2 COLONNES) --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info prend moins de place que le form */
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+/* --- COLONNE GAUCHE (INFOS) --- */
+.contact-info { display: flex; flex-direction: column; gap: 20px; }
+
+.info-card {
+    background: white; padding: 25px; border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
+    display: flex; flex-direction: column; align-items: flex-start;
+}
+.info-card .icon { font-size: 2rem; margin-bottom: 15px; background: #f0fdf4; padding: 10px; border-radius: 50%; }
+.info-card h3 { font-size: 1.1rem; color: #111; margin-bottom: 5px; }
+.info-card p { color: #666; line-height: 1.6; margin: 0; }
+.sub-text { font-size: 0.85rem; color: #888; }
+
+.map-container { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px; }
+
+/* --- COLONNE DROITE (FORMULAIRE) --- */
+.contact-form-container {
+    background: white; padding: 40px; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee;
+}
+.contact-form-container h2 { margin-bottom: 30px; color: #1a5f3d; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #374151; font-size: 0.95rem; }
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px 15px;
+    border: 1px solid #d1d5db; border-radius: 8px;
+    font-size: 1rem; transition: border-color 0.3s;
+    background-color: #f9fafb;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #1a5f3d; outline: none; background-color: white;
+}
+
+.btn-submit {
+    width: 100%; padding: 15px;
+    background-color: #1a5f3d; color: white;
+    border: none; border-radius: 8px;
+    font-size: 1.1rem; font-weight: 700; cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn-submit:hover { background-color: #144e32; transform: translateY(-2px); }
+
+/* --- ALERTS --- */
+.alert { padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: 500; }
+.alert.success { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+.alert.error { background: #fee2e2; color: #991b1b; border: 1px solid #ef4444; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+/* Animation d'apparition */
+.fade-in { animation: fadeIn 0.5s ease-in; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+
+.info-card .icon {
+    width: 64px;
+    height: 64px;
+    background: #f0fdf4; /* Cercle vert clair */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* On retire font-size car ce n'est plus du texte */
+}
+
+/* Nouveau style pour l'image à l'intérieur du cercle */
+.info-card .icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
