@@ -8,7 +8,7 @@ class Database
     {
         if (self::$instance === null) {
             self::$instance = new PDO(
-                "mysql:host=localhost;dbname=rentium;charset=utf8mb4",
+                "mysql:host=localhost;dbname=rentium_2;charset=utf8mb4",
                 "root",
                 "",
                 [

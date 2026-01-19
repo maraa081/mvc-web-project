@@ -26,32 +26,81 @@ require __DIR__ . '/layout/header.php';
                 <?php unset($_SESSION['success']); ?>
             <?php endif; ?>
 
-            <form method="POST" action="<?= BASE_URL ?>/public/index.php?page=register" id="registerForm">
+            <?php if (isset($_SESSION['confirm_link'])): ?>
+                <div class="auth-message success">
+                    <strong>Mode DEV :</strong>
+                    <a href="<?= htmlspecialchars($_SESSION['confirm_link'], ENT_QUOTES, 'UTF-8') ?>">
+                    Cliquez ici pour confirmer votre compte
+                    </a>
+                </div>
+                <?php unset($_SESSION['confirm_link']); ?>
+            <?php endif; ?>
+
+
+            <form method="POST" 
+                  action="<?= BASE_URL ?>/public/index.php?page=register" 
+                  id="registerForm" 
+                  novalidate>
+
+                <!-- 🔐 Token CSRF -->
+                <input type="hidden" name="csrf_token" 
+                       value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+
                 <div class="form-row">
                     <div class="form-group">
                         <label>Prénom</label>
-                        <input type="text" name="prenom" placeholder="Votre prénom" required>
+                        <input 
+                            type="text" 
+                            name="prenom" 
+                            placeholder="Votre prénom" 
+                            required 
+                            minlength="2"
+                            autocomplete="given-name">
                     </div>
 
                     <div class="form-group">
                         <label>Nom</label>
-                        <input type="text" name="nom" placeholder="Votre nom" required>
+                        <input 
+                            type="text" 
+                            name="nom" 
+                            placeholder="Votre nom" 
+                            required 
+                            minlength="2"
+                            autocomplete="family-name">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="exemple@email.com" required>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="exemple@email.com" 
+                        required 
+                        autocomplete="email"
+                        inputmode="email">
                 </div>
 
                 <div class="form-group">
                     <label>Mot de passe</label>
-                    <input type="password" name="password" placeholder="Au moins 8 caractères" required>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="Au moins 8 caractères" 
+                        required 
+                        minlength="8"
+                        autocomplete="new-password">
                 </div>
 
                 <div class="form-group">
                     <label>Confirmer le mot de passe</label>
-                    <input type="password" name="password_confirm" placeholder="Confirmez votre mot de passe" required>
+                    <input 
+                        type="password" 
+                        name="password_confirm" 
+                        placeholder="Confirmez votre mot de passe" 
+                        required 
+                        minlength="8"
+                        autocomplete="new-password">
                 </div>
 
                 <label class="checkbox-label">

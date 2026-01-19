@@ -7,6 +7,7 @@ $page = $_GET['page'] ?? 'home';
 
 switch ($page) {
 
+    // --- ROUTES COMMUNES ---
     case 'home':
         require_once '../app/controllers/HomeController.php';
         (new HomeController())->index();
@@ -51,11 +52,85 @@ switch ($page) {
         require_once '../app/controllers/BookingController.php';
         (new BookingController())->store();
         break;
+
+    // --- ROUTES DU PROJET B (BLOG & SETTINGS) ---
     case 'blog':
-        require_once '../app/controllers/StaticController.php';
-        (new StaticController())->blog();
+        require_once '../app/controllers/BlogController.php';
+        (new BlogController())->index(); 
         break;
 
+    case 'blog_rate':
+        require_once '../app/controllers/BlogController.php';
+        (new BlogController())->rate();
+        break;
+
+    case 'settings':
+        require_once '../app/controllers/SettingsController.php';
+        (new SettingsController())->index();
+        break;
+
+    case 'faq':
+        require_once '../app/controllers/StaticController.php';
+        (new StaticController())->faq();
+        break;
+    
+    case 'cgu':
+        require_once '../app/controllers/StaticController.php';
+        (new StaticController())->cgu();
+        break;
+
+    // --- ROUTES DU PROJET A (CONCESSIONNAIRES & CARTE) ---
+    case 'register_concessionnaire':
+        require_once '../app/controllers/AuthController.php';
+        (new AuthController())->registerConcessionnaire();
+        break;
+    
+    case 'login_concessionnaire':
+        require_once '../app/controllers/AuthController.php';
+        (new AuthController())->loginConcessionnaire();
+        break;
+
+    case 'dashboard_concessionnaire':
+        require_once '../app/controllers/AuthController.php';
+        (new AuthController())->dashboardConcessionnaire();
+        break;
+
+    case 'forgot_password': // Gestion MDP (Projet A est plus complet sur ce point)
+        require_once '../app/controllers/PasswordResetController.php';
+        (new PasswordResetController())->forgotPassword();
+        break;
+
+    case 'reset_password':
+        require_once '../app/controllers/PasswordResetController.php';
+        (new PasswordResetController())->resetPassword();
+        break;
+
+    case 'ajouter_voiture':
+        require_once '../app/controllers/VoitureController.php';
+        (new VoitureController())->ajouterVoiture();
+        break;
+
+    case 'mes_voitures':
+        require_once '../app/controllers/VoitureController.php';
+        (new VoitureController())->mesVoitures();
+        break;
+
+    case 'modifier_voiture':
+        require_once '../app/controllers/VoitureController.php';
+        (new VoitureController())->modifierVoiture();
+        break;
+
+    case 'supprimer_voiture':
+        require_once '../app/controllers/VoitureController.php';
+        (new VoitureController())->supprimerVoiture();
+        break;
+
+    case 'carte':
+        require_once '../app/controllers/CarteController.php';
+        (new CarteController())->index();
+        break;
+
+    // --- ROUTES STATIQUES ---
     case 'about':
         require_once '../app/controllers/StaticController.php';
         (new StaticController())->about();

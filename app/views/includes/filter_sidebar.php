@@ -107,18 +107,22 @@
 
         <hr>
 
-        <!-- FILTRE PAR CONCESSION -->
+        <!-- Filtre par Concessions -->
         <div class="filter-section">
-            <h4>📍 Concession</h4>
-            <div class="checkbox-grid">
-                <label class="filter-checkbox">
-                    <input type="checkbox" name="concession" value="Concession Rentium Paris">
-                    <span class="checkbox-label">Concession Rentium Paris</span>
-                </label>
-                <label class="filter-checkbox">
-                    <input type="checkbox" name="concession" value="Rentium Paris">
-                    <span class="checkbox-label">Rentium Paris</span>
-                </label>
+            <h3>📍 Concessions</h3>
+            <div class="filter-checkboxes">
+                <?php if (isset($concessions) && !empty($concessions)): ?>
+                    <?php foreach ($concessions as $concession): ?>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" 
+                                name="concession" 
+                                value="<?= htmlspecialchars($concession, ENT_QUOTES, 'UTF-8') ?>">
+                            <span><?= htmlspecialchars($concession, ENT_QUOTES, 'UTF-8') ?></span>
+                        </label>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p style="color: #999; font-size: 0.9rem;">Aucune concession disponible</p>
+                <?php endif; ?>
             </div>
         </div>
 

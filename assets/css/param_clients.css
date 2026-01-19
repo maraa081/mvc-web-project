@@ -96,6 +96,15 @@ body {
     font-weight: 600;
 }
 
+.settings-wrapper { 
+        max-width: 900px; 
+        width: 95%; /* Prend presque toute la largeur sur mobile */
+        margin: 40px auto !important; /* LE SECRET : auto à gauche et à droite centre le bloc */
+        padding: 0;
+        display: block;
+        position: relative;
+    }
+
 /* --- MAIN CONTENT --- */
 .main-content {
     flex: 1;

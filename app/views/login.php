@@ -5,7 +5,6 @@ require __DIR__ . '/layout/header.php';
 
 <div class="auth-container">
     <div class="auth-wrapper">
-        <!-- Formulaire de Login -->
         <div class="auth-box">
             <div class="auth-header">
                 <h1>Connexion</h1>
@@ -37,15 +36,32 @@ require __DIR__ . '/layout/header.php';
                 <?php unset($_SESSION['confirm_link']); ?>
             <?php endif; ?>
 
-            <form method="POST" action="<?= BASE_URL ?>/public/index.php?page=login" id="loginForm">
+            <form method="POST" action="<?= BASE_URL ?>/public/index.php?page=login" id="loginForm" novalidate>
+                <input type="hidden" name="csrf_token" 
+                       value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="exemple@email.com" required>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="exemple@email.com" 
+                        required 
+                        autocomplete="email"
+                        inputmode="email"
+                    >
                 </div>
 
                 <div class="form-group">
                     <label>Mot de passe</label>
-                    <input type="password" name="password" placeholder="Entrez votre mot de passe" required>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="Entrez votre mot de passe" 
+                        required 
+                        autocomplete="current-password"
+                        minlength="8"
+                    >
                 </div>
 
                 <div class="form-options">
@@ -53,7 +69,9 @@ require __DIR__ . '/layout/header.php';
                         <input type="checkbox" name="remember">
                         <span>Se souvenir de moi</span>
                     </label>
-                    <a href="<?= BASE_URL ?>/public/index.php?page=forgot_password" class="forgot-password">Mot de passe oublié ?</a>
+                    <a href="<?= BASE_URL ?>/public/index.php?page=forgot_password" class="forgot-password">
+                        Mot de passe oublié ?
+                    </a>
                 </div>
 
                 <button type="submit" class="btn-submit">Se connecter</button>
@@ -74,7 +92,6 @@ require __DIR__ . '/layout/header.php';
             </form>
         </div>
 
-        <!-- Image de côté -->
         <div class="auth-image">
             <div class="image-overlay">
                 <h2>Réservez votre véhicule en quelques clics</h2>

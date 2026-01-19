@@ -55,6 +55,8 @@
                     <li><a href="<?= BASE_URL ?>/public/index.php?page=about">À propos</a></li>
                     <li><a href="<?= BASE_URL ?>/public/index.php?page=contact">Contact</a></li>
                     <li><a href="<?= BASE_URL ?>/public/index.php?page=blog">Blog</a></li>
+                    <li><a href="index.php?page=faq">FAQ (Foire aux Questions)</a></li>
+                    <li><a href="index.php?page=cgu">CGU (Mentions Légales)</a></li>
                 </ul>
             </div>
 

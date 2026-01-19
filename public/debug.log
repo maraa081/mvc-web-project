@@ -1,0 +1,2970 @@
+2026-01-17 18:35:26 - Données reçues:
+Array
+(
+    [type] => Berline
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Berline
+Filtres finaux: Array
+(
+    [type] => Berline
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-17 18:35:32 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:35:34 - Données reçues:
+Array
+(
+    [type] => Citadine
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Citadine
+Filtres finaux: Array
+(
+    [type] => Citadine
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:35:39 - Données reçues:
+Array
+(
+    [type] => Électrique
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Électrique
+Filtres finaux: Array
+(
+    [type] => Électrique
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:35:42 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:35:45 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:35:51 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 25
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 25
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-17 18:35:53 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 35
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 35
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:35:57 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:35:58 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Mercedes
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Mercedes
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:01 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Mercedes
+            [1] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Mercedes
+            [1] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-17 18:36:02 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:03 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+            [1] => Audi
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+            [1] => Audi
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-17 18:36:04 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-17 18:36:06 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:07 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Tesla
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Tesla
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:08 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:09 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:09 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:10 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Peugeot
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Peugeot
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:10 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:12 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Renault
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Renault
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-17 18:36:12 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:13 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Citroën
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Citroën
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-17 18:36:13 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:15 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+            [0] => Noir
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [couleurs] => Array
+        (
+            [0] => Noir
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:36:16 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:17 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+            [0] => Blanc
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [couleurs] => Array
+        (
+            [0] => Blanc
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-17 18:36:18 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:19 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+            [0] => Rouge
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [couleurs] => Array
+        (
+            [0] => Rouge
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-17 18:36:20 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:36:22 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+            [0] => Vert
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [couleurs] => Array
+        (
+            [0] => Vert
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-17 18:36:23 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:50:10 - Données reçues:
+Array
+(
+    [type] => Électrique
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Électrique
+Filtres finaux: Array
+(
+    [type] => Électrique
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:50:11 - Données reçues:
+Array
+(
+    [type] => Berline
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Berline
+Filtres finaux: Array
+(
+    [type] => Berline
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-17 18:50:12 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:50:13 - Données reçues:
+Array
+(
+    [type] => Citadine
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Citadine
+Filtres finaux: Array
+(
+    [type] => Citadine
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-17 18:50:14 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:50:22 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+            [0] => renault
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [concessions] => Array
+        (
+            [0] => renault
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-17 18:50:28 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-17 18:50:29 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-19 10:59:00 - Données reçues:
+Array
+(
+    [type] => Électrique
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Électrique
+Filtres finaux: Array
+(
+    [type] => Électrique
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-19 10:59:01 - Données reçues:
+Array
+(
+    [type] => Citadine
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Citadine
+Filtres finaux: Array
+(
+    [type] => Citadine
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-19 10:59:01 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-19 10:59:02 - Données reçues:
+Array
+(
+    [type] => Berline
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Berline
+Filtres finaux: Array
+(
+    [type] => Berline
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 10:59:03 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-19 10:59:07 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_desc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_desc
+)
+
+Véhicules trouvés: 7
+
+2026-01-19 10:59:09 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-19 10:59:09 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 7
+
+2026-01-19 12:13:49 - Données reçues:
+Array
+(
+    [type] => Électrique
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Électrique
+Filtres finaux: Array
+(
+    [type] => Électrique
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 12:13:53 - Données reçues:
+Array
+(
+    [type] => Citadine
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Citadine
+Filtres finaux: Array
+(
+    [type] => Citadine
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 12:13:54 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 12:13:58 - Données reçues:
+Array
+(
+    [type] => Berline
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Berline
+Filtres finaux: Array
+(
+    [type] => Berline
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 9
+
+2026-01-19 12:14:01 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:03 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 45
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 45
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 12:14:05 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 60
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 60
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 8
+
+2026-01-19 12:14:10 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:13 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 12:14:14 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:15 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 12:14:16 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:16 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 12:14:18 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:19 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:14:20 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:23:44 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_desc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_desc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 12:23:49 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:32:33 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:32:38 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 40
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 40
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 14:32:39 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 50
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 50
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 14:32:41 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 55
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 55
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 14:32:42 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 65
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 65
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-19 14:32:47 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:32:55 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_desc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_desc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:32:57 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => marque_desc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => marque_desc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:32:59 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => recent
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => recent
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:33:02 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => oldest
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => oldest
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:33:05 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => BMW
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:33:16 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:17 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Audi
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 14:33:18 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:19 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Tesla
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Tesla
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 1
+
+2026-01-19 14:33:19 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:20 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 14:33:21 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:22 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [marques] => Array
+        (
+            [0] => Toyota
+        )
+
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 3
+
+2026-01-19 14:33:28 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:29 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:33 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+
+2026-01-19 14:33:59 - Données reçues:
+Array
+(
+    [type] => Électrique
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Électrique
+Filtres finaux: Array
+(
+    [type] => Électrique
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:34:00 - Données reçues:
+Array
+(
+    [type] => Citadine
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Citadine
+Filtres finaux: Array
+(
+    [type] => Citadine
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 0
+
+2026-01-19 14:34:02 - Données reçues:
+Array
+(
+    [type] => SUV
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: SUV
+Filtres finaux: Array
+(
+    [type] => SUV
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 2
+
+2026-01-19 14:34:03 - Données reçues:
+Array
+(
+    [type] => Berline
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+TYPE: Berline
+Filtres finaux: Array
+(
+    [type] => Berline
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 9
+
+2026-01-19 14:34:07 - Données reçues:
+Array
+(
+    [type] => 
+    [sortBy] => price_asc
+    [maxPrice] => 100
+    [marques] => Array
+        (
+        )
+
+    [couleurs] => Array
+        (
+        )
+
+    [concessions] => Array
+        (
+        )
+
+)
+
+
+Filtres finaux: Array
+(
+    [maxPrice] => 100
+    [sortBy] => price_asc
+)
+
+Véhicules trouvés: 18
+

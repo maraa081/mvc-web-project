@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // URL de base
-define('BASE_URL', 'http://localhost/test');
+define('BASE_URL', 'http://localhost/test_fusion');
 
 // Affichage des erreurs (DEV)
 ini_set('display_errors', 1);

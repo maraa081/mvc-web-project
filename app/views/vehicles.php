@@ -10,7 +10,7 @@ require __DIR__ . '/layout/header.php';
         <div class="filter-buttons">
             <button class="filter-btn active" onclick="filterByType('', event)">🔍 Tout voir</button>
             <button class="filter-btn" onclick="filterByType('Berline', event)">🚗 Berline</button>
-            <button class="filter-btn" onclick="filterByType('SUV', event)">🚐 SUV</button>
+            <button class="filter-btn" onclick="filterByType('SUV', event)">🚙 SUV</button>
             <button class="filter-btn" onclick="filterByType('Citadine', event)">🏙️ Citadine</button>
             <button class="filter-btn" onclick="filterByType('Électrique', event)">⚡ Électrique</button>
             
@@ -41,10 +41,17 @@ require __DIR__ . '/layout/header.php';
 
     <div class="vehicle-grid" id="vehicleContainer">
         <?php foreach ($vehicles as $v): ?>
-            <div class="vehicle-card">
+            <div class="vehicle-card" data-type="<?= htmlspecialchars($v['type']) ?>" 
+                 data-marque="<?= htmlspecialchars($v['marque']) ?>"
+                 data-prix="<?= $v['prix_journalier'] ?>">
                 <div class="vehicle-image">
-                    <img src="<?= BASE_URL ?>/assets/images/vehicles/<?= htmlspecialchars($v['image']) ?>"
-                         alt="<?= htmlspecialchars($v['marque'] . ' ' . $v['modele']) ?>">
+                    <?php
+                    // ✅ Utiliser image_url formatée par le contrôleur
+                    $imageUrl = $v['image_url'] ?? (BASE_URL . '/assets/images/vehicles/default.jpg');
+                    ?>
+                    <img src="<?= htmlspecialchars($imageUrl) ?>"
+                         alt="<?= htmlspecialchars($v['marque'] . ' ' . $v['modele']) ?>"
+                         onerror="this.src='<?= BASE_URL ?>/assets/images/vehicles/default.jpg'">
                 </div>
 
                 <div class="vehicle-info">
@@ -58,7 +65,7 @@ require __DIR__ . '/layout/header.php';
                     </div>
 
                     <div class="vehicle-features">
-                        <div class="vehicle-feature">📍 <?= htmlspecialchars($v['concession']) ?></div>
+                        <div class="vehicle-feature">📍 <?= htmlspecialchars($v['concession'] ?? 'Non spécifié') ?></div>
                         <div class="vehicle-feature">🎨 <?= htmlspecialchars($v['couleur']) ?></div>
                         <div class="vehicle-feature">🚘 <?= htmlspecialchars($v['type']) ?></div>
                     </div>
@@ -71,11 +78,17 @@ require __DIR__ . '/layout/header.php';
             </div>
         <?php endforeach; ?>
     </div>
+
+    <?php if (empty($vehicles)): ?>
+        <div style="text-align: center; padding: 60px 20px; color: #666;">
+            <p style="font-size: 1.2rem;">😕 Aucun véhicule disponible pour le moment.</p>
+        </div>
+    <?php endif; ?>
 </div>
 
 <script>
     const VEHICLE_API = "<?= BASE_URL ?>/public/filter_vehicules.php";
-    const VEHICLE_IMAGE_PATH = "<?= BASE_URL ?>/assets/images/vehicles/";
+    const VEHICLE_IMAGE_PATH = "<?= BASE_URL ?>/public/uploads/";
     const DETAIL_PAGE_URL = "<?= BASE_URL ?>/public/index.php?page=vehicle&plaque=";
 </script>
 <script src="<?= BASE_URL ?>/assets/js/filter.js"></script>

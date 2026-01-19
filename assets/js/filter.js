@@ -122,7 +122,7 @@ async function applyFilters() {
         // ✅ CORRECTION : On utilise VEHICLE_API défini dans vehicles.php
         const apiUrl = (typeof VEHICLE_API !== 'undefined') 
             ? VEHICLE_API 
-            : 'filter_vehicles.php';
+            : 'filter_vehicules.php';
             
         const response = await fetch(apiUrl, {
             method: 'POST',
@@ -139,11 +139,19 @@ async function applyFilters() {
         const data = await response.json();
         console.log("📥 Réponse reçue :", data);
 
-        if (data.success) {
+        // ✅ CORRECTION: Vérifier le format de la réponse
+        if (data.success && data.vehicles) {
             renderVehicles(data.vehicles);
-        } else {
+        } else if (data.success === false) {
             console.error("❌ Erreur serveur :", data.error);
             grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:red;">Erreur lors du chargement des véhicules</div>';
+        } else if (Array.isArray(data)) {
+            // Si la réponse est directement un tableau (ancien format)
+            console.log("⚠️ Format de réponse ancien détecté, utilisation directe du tableau");
+            renderVehicles(data);
+        } else {
+            console.error("❌ Format de réponse inattendu :", data);
+            grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:red;">Format de réponse invalide</div>';
         }
         
     } catch (error) {
@@ -155,7 +163,7 @@ async function applyFilters() {
 }
 
 /**
- * Affiche les véhicules dans la grille
+ * ✅ CORRECTION: Affiche les véhicules avec image_url
  */
 function renderVehicles(vehicles) {
     const grid = document.querySelector('.vehicle-grid');
@@ -175,32 +183,35 @@ function renderVehicles(vehicles) {
         return;
     }
 
-    // Récupération des chemins depuis les variables globales
-    const imgPath = (typeof VEHICLE_IMAGE_PATH !== 'undefined') 
-        ? VEHICLE_IMAGE_PATH 
-        : '../assets/images/vehicles/';
+    // ✅ URL de base pour l'image par défaut
+    const defaultImage = (typeof BASE_URL !== 'undefined') 
+        ? BASE_URL + '/assets/images/vehicles/default.jpg'
+        : '/assets/images/vehicles/default.jpg';
         
     const detailUrl = (typeof DETAIL_PAGE_URL !== 'undefined')
         ? DETAIL_PAGE_URL
         : 'index.php?page=vehicle&plaque=';
 
     vehicles.forEach(v => {
+        // ✅ CORRECTION: Utiliser v.image_url au lieu de construire le chemin
+        const imageUrl = v.image_url || defaultImage;
+        
         const card = `
             <div class="vehicle-card">
                 <div class="vehicle-image">
-                    <img src="${imgPath}${v.image}" 
-                         alt="${v.marque} ${v.modele}"
-                         onerror="this.src='${imgPath}default.jpg'">
+                    <img src="${escapeHtml(imageUrl)}" 
+                         alt="${escapeHtml(v.marque)} ${escapeHtml(v.modele)}"
+                         onerror="this.src='${defaultImage}'">
                 </div>
                 <div class="vehicle-info">
                     <div class="vehicle-header">
-                        <span class="vehicle-name">${v.marque} ${v.modele}</span>
+                        <span class="vehicle-name">${escapeHtml(v.marque)} ${escapeHtml(v.modele)}</span>
                         <span class="vehicle-price">${Math.round(v.prix_journalier)}€/j</span>
                     </div>
                     <div class="vehicle-features">
-                        <div class="vehicle-feature">📍 ${v.concession || 'Standard'}</div>
-                        <div class="vehicle-feature">🎨 ${v.couleur}</div>
-                        <div class="vehicle-feature">🚘 ${v.type}</div>
+                        <div class="vehicle-feature">📍 ${escapeHtml(v.concession || 'Standard')}</div>
+                        <div class="vehicle-feature">🎨 ${escapeHtml(v.couleur)}</div>
+                        <div class="vehicle-feature">🚘 ${escapeHtml(v.type)}</div>
                     </div>
                     <a class="vehicle-btn" href="${detailUrl}${encodeURIComponent(v.plaque)}">
                         Voir les détails
@@ -217,6 +228,16 @@ function renderVehicles(vehicles) {
     }
     
     console.log(`✅ ${vehicles.length} véhicule(s) affiché(s)`);
+}
+
+/**
+ * ✅ Fonction pour échapper le HTML (sécurité XSS)
+ */
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 /**
@@ -271,3 +292,38 @@ function resetFilters() {
     // Application des filtres vides
     applyFilters();
 }
+
+/**
+ * Appliquer les filtres avancés depuis le panneau
+ */
+function applyAdvancedFilters() {
+    // Récupérer tous les filtres
+    const marques = Array.from(document.querySelectorAll('input[name="marque"]:checked'))
+        .map(cb => cb.value);
+    
+    const couleurs = Array.from(document.querySelectorAll('input[name="couleur"]:checked'))
+        .map(cb => cb.value);
+    
+    const concessions = Array.from(document.querySelectorAll('input[name="concession"]:checked'))
+        .map(cb => cb.value);
+    
+    const maxPrice = document.getElementById('maxPrice')?.value || '';
+
+    // Mettre à jour les filtres
+    currentFilters = {
+        type: currentType,
+        sortBy: currentSort,
+        maxPrice: maxPrice,
+        marques: marques,
+        couleurs: couleurs,
+        concessions: concessions
+    };
+
+    console.log("🔧 Filtres avancés appliqués:", currentFilters);
+
+    // Appliquer
+    applyFilters();
+    
+    // Fermer le panneau
+    toggleFilterPanel();
+}           
